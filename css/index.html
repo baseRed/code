@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #main{
+            width: 200px;
+            height: 100px;
+            background: red;
+            /* transition: width 1s,background 1s;
+            transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition-delay: 1s; */
+            /* transition-property:  */
+            /* transition-duration: unset */
+            animation: run 1s;
+            /* animation-direction: reverse; */
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-timing-function: steps(1)
+            
+        }
+
+        /* #main:hover{
+            width: 800px;
+            background: greenyellow
+        } */
+
+        @keyframes run {
+            0%{
+                width: 200px;
+                height: 100px;
+                background: red;
+            }
+            25%{
+                width: 500px;
+                height: 400px;
+                background: yellow;
+            }
+            50%{
+                width: 1000px;
+                height: 900px;
+                background: greenyellow
+            }
+            70%{
+                width: 1500px;
+                height: 1400px;
+                background: green
+            }
+            100%{
+                width: 200px;
+                height: 100px;
+                background: red;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+
+    <div id="main"></div>
+
+</body>
+</html>

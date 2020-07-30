@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css"> 
+        .box{background: red;
+          /*解决代码*/
+          /* height: 100px; */
+        }
+        .clearFloat{
+            zoom: 1;
+        }
+        .clearFloat::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .left{
+            background: blue;float: left;
+            height: 100px;width:40%;
+        }
+        .right{
+            background: pink;float: right;
+            height: 100px;width:50%;
+        }
+        .footer{background: orange;height: 50px;}
+        .clear{/*解决代码*/clear: both;}
+        </style> 
+      
+</head>
+<body>
+        <div class="box clearFloat"> 
+            <div class="left">Left</div> 
+            <div class="right">Right</div> 
+            <div class=""></div>
+        </div> 
+        <div class="footer"> </div> 
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="out" style="margin: 200px auto;overflow: auto;width: 500px;height: 500px;border:1px solid red">
+        <div id="in" style="width: 800px;height: 800px;border: 1px solid green"></div>
+    </div>
+
+    <script>
+        // scrollWidth：对象的实际内容的宽度，不包边线宽度，会随对象中内容超过可视区后而变大。
+        // clientWidth：对象内容的可视区的宽度，不包滚动条等边线，会随对象显示大小的变化而改变。
+        // offsetWidth：对象整体的实际宽度，包滚动条等边线，会随对象显示大小的变化而改变。
+        // innerWidth：
+        // window.innerHeight=浏览器窗口的内部高度
+        // window.innerWidth=浏览器窗口的内部宽度
+
+
+        // offsetTop:当前元素顶端距离父元素顶端距离,鼠标滚轮不会影响其数值.
+        // scrollTop:当前元素顶端距离窗口顶端距离,鼠标滚轮会影响其数值.
+
+        var out = document.getElementById('out')
+        var inner = document.getElementById('in')
+
+        console.log('******************************');
+        
+        console.log('out scrollWidth',out.scrollWidth);
+        console.log('in scrollWidth',inner.scrollWidth);
+
+        console.log('******************************');
+
+        console.log('out client-width',out.clientWidth);
+        console.log('in client-width',inner.clientWidth);
+
+        console.log('******************************');
+
+        console.log('out inner-width',out.offsetWidth)
+        console.log('in inner-width',inner.offsetWidth);
+        console.log('window inner-width',window.innerWidth);
+        
+
+        console.log('******************************');
+
+        console.log('out width',out.style.width);
+        console.log('in width',inner.style.width);
+        
+        
+
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>
