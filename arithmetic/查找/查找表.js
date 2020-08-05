@@ -12,10 +12,22 @@
 // 因为 nums[0] + nums[1] = 2 + 7 = 9
 // 所以返回 [0, 1]
 
+// 方法一：暴力解法，双重for循环
+// 方法二：排序，指针对撞，target-a是否存在
+
 var twoSum = function(nums, target) {
     let map = new Map()
 
     for(let i in nums){
+        if(map.get(target - nums[i])){
+            return [map.get(target - nums[i]),i]
+        }
+
         map.set(nums[i],i)
     }
+
+    return []
 };
+
+
+// 练习15 18  16
